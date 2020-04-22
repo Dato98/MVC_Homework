@@ -1,0 +1,22 @@
+﻿@model WebApp.Models.News
+@{
+    ViewData["Title"] = "News";
+}
+@{ var lang = Model.lang;}
+
+<div class="news-container">
+    @if (lang == "en")
+    {
+        <h1>@Model.Title</h1>
+        <img src="~/Img/@Model.Tumb" />
+        <p>@Model.Description</p>
+    }
+    else
+    {
+        <h1>@Model.TitleGeo</h1>
+        <img src="~/Img/@Model.Tumb" />
+        <p>@Model.DesctiptionGeo</p>
+    }
+
+</div>
+
